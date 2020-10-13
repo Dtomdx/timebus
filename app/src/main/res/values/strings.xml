@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">timebus</string>
+
+
+    <string name="BotonInicio">Inicio</string>
+    <string name="BotonColaborador">Colaborador</string>
+
+
+    <string name="TxtViewSelOrigenDestino">Seleccionar Origen y Destino</string>
+    <string name="TxtViewCiuOrigen">Ciudad Origen</string>
+    <string name="TxtViewCiuDestino">Ciudad Destino</string>
+</resources>
