@@ -58,23 +58,6 @@ public class VSeleccionTerminal extends AppCompatActivity implements RecyclerAda
         svSearch.setOnQueryTextListener(this);
     }
 
-    /*private List<ItemList> getItems() {
-        List<ItemList> itemLists = new ArrayList<>();
-        itemLists.add(new ItemList("Saga de Broly", "Ultima pelicula de DB, peleas epicas.", R.drawable.saga_broly));
-        itemLists.add(new ItemList("Super sayayines 4", "La ultima transformacion de la saga no canon.", R.drawable.ssj4s));
-        itemLists.add(new ItemList("Super Sayayiness Blues", "Goku y Vegeta, la transformacion de dioses.", R.drawable.ssj_blues));
-        itemLists.add(new ItemList("Goku ultrainstinto", "Infaltablñe power-up a Goku.", R.drawable.ultrainsitinto));
-        itemLists.add(new ItemList("Super Vegeta Blue x2", "Diferentes transformaciones de super Vegeta.", R.drawable.super_vegeta));
-        itemLists.add(new ItemList("Vegeta sapbe", "Vegeta sapbe o no sapbe xD.", R.drawable.vegeta_blue));
-        itemLists.add(new ItemList("Saga de Broly", "Ultima pelicula de DB, peleas epicas.", R.drawable.saga_broly));
-        itemLists.add(new ItemList("Super sayayines 4", "La ultima transformacion de la saga no canon.", R.drawable.ssj4s));
-        itemLists.add(new ItemList("Super Sayayiness Blues", "Goku y Vegeta, la transformacion de dioses.", R.drawable.ssj_blues));
-        itemLists.add(new ItemList("Goku ultrainstinto", "Infaltablñe power-up a Goku.", R.drawable.ultrainsitinto));
-        itemLists.add(new ItemList("Super Vegeta Blue x2", "Diferentes transformaciones de super Vegeta.", R.drawable.super_vegeta));
-        itemLists.add(new ItemList("Vegeta sapbe", "Vegeta sapbe o no sapbe xD.", R.drawable.vegeta_blue));
-
-        return itemLists;
-    }*/
 
     private void getItemsSQL() {
         retrofitApiService.getItemsDB().enqueue(new Callback<List<ItemList>>() {
@@ -93,9 +76,8 @@ public class VSeleccionTerminal extends AppCompatActivity implements RecyclerAda
     }
     @Override
     public void itemClick(ItemList item) {
-        Intent intent = new Intent(this, DetailActivity.class);
-        intent.putExtra("itemDetail", item);
-        startActivity(intent);
+        Intent siguiente =new Intent(this,VSeleccionEmpresa.class) ;
+        startActivity(siguiente);
     }
 
     @Override
