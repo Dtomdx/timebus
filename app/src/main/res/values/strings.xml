@@ -9,4 +9,7 @@
     <string name="TxtViewSelOrigenDestino">Seleccionar Origen y Destino</string>
     <string name="TxtViewCiuOrigen">Ciudad Origen</string>
     <string name="TxtViewCiuDestino">Ciudad Destino</string>
+    <string name="buttonLocTerminal">Localiza terminales</string>
+
+
 </resources>

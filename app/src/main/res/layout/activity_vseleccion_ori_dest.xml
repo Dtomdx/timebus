@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".VSeleccionOriDest">
+    tools:context=".activity.VSeleccionOriDest">
 
     <TextView
         android:id="@+id/txtVSelOriDest"
@@ -28,14 +28,47 @@
 
     <com.toptoche.searchablespinnerlibrary.SearchableSpinner
         android:id="@+id/spCompany"
-        android:layout_width="273dp"
-        android:layout_height="46dp"
+        android:layout_width="156dp"
+        android:layout_height="31dp"
         android:layout_marginEnd="48dp"
-        android:layout_marginBottom="352dp"
+        android:layout_marginBottom="532dp"
+        android:spinnerMode="dropdown"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.766"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <com.toptoche.searchablespinnerlibrary.SearchableSpinner
+        android:id="@+id/spCompany1"
+        android:layout_width="156dp"
+        android:layout_height="31dp"
+        android:layout_marginEnd="48dp"
+        android:layout_marginBottom="356dp"
+        android:spinnerMode="dropdown"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/txtVCiuDestino"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="156dp"
+        android:text="@string/TxtViewCiuDestino"
         app:layout_constraintStart_toStartOf="parent"
-        android:spinnerMode="dropdown"/>
+        app:layout_constraintTop_toBottomOf="@+id/txtVCiuOrigen" />
+
+    <Button
+        android:id="@+id/buttonLocTerminal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="80dp"
+        android:layout_marginEnd="108dp"
+        android:onClick="Control"
+        android:text="@string/buttonLocTerminal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/spCompany1" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

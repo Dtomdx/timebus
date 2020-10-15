@@ -1,10 +1,12 @@
-package com.example.timebus;
+package com.example.timebus.activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+
+import com.example.timebus.R;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -20,7 +22,7 @@ public class MainActivity extends AppCompatActivity {
         switch (view.getId())
         {
             case R.id.btnInicio:
-                miIntent = new Intent(MainActivity.this,VSeleccionOriDest.class);
+                miIntent = new Intent(MainActivity.this, VSeleccionOriDest.class);
                 break;
         }
         if (miIntent != null)

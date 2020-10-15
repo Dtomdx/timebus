@@ -1,4 +1,4 @@
-package com.example.timebus;
+package com.example.timebus.model;
 
 public class SpinnerModel {
 

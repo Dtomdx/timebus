@@ -1,11 +1,18 @@
-package com.example.timebus;
+package com.example.timebus.activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Spinner;
+import android.widget.Toast;
+
+import com.example.timebus.R;
+import com.example.timebus.retrofit_data.SpinnerInterface;
+import com.example.timebus.model.SpinnerModel;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -24,8 +31,10 @@ import static android.R.layout.simple_spinner_item;
 public class VSeleccionOriDest extends AppCompatActivity {
 
     private ArrayList<SpinnerModel> goodModelArrayList;
+    //private ArrayList<SpinnerModel> goodModelArrayList1;
     private ArrayList<String> playerNames = new ArrayList<String>();
     private Spinner spinner;
+    private Spinner spinner1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,7 +42,12 @@ public class VSeleccionOriDest extends AppCompatActivity {
         setContentView(R.layout.activity_vseleccion_ori_dest);
 
         spinner = findViewById(R.id.spCompany);
+        spinner1 = findViewById(R.id.spCompany1);
         fetchJSON();
+
+
+
+
     }
 
     private void fetchJSON(){
@@ -108,6 +122,10 @@ public class VSeleccionOriDest extends AppCompatActivity {
             ArrayAdapter<String> spinnerArrayAdapter = new ArrayAdapter<String>(VSeleccionOriDest.this, simple_spinner_item, playerNames);
             spinnerArrayAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item); // The drop down view
             spinner.setAdapter(spinnerArrayAdapter);
+            spinner1.setAdapter(spinnerArrayAdapter);
+
+
+
 
             //}
 
@@ -116,4 +134,50 @@ public class VSeleccionOriDest extends AppCompatActivity {
         }
 
     }
+
+    public void Control(View view){
+
+        String ciudad_origen = spinner.getSelectedItem().toString();
+        String ciudad_destino = spinner1.getSelectedItem().toString();
+
+        if (ciudad_origen.equals(ciudad_destino)){
+            Toast.makeText(this,"Elija otro destino",Toast.LENGTH_LONG).show();
+
+        }
+
+        if (!ciudad_origen.equals(ciudad_destino)){
+
+            Intent miIntent = null;
+            switch (view.getId())
+            {
+                case R.id.buttonLocTerminal:
+                    miIntent = new Intent(VSeleccionOriDest.this, VSeleccionTerminal.class);
+                    break;
+            }
+            if (miIntent != null)
+            {
+                startActivity(miIntent);
+            }
+        }
+
+
+
+    }
+
+    /*public void clickLocTerminal(View view) {
+        Intent miIntent = null;
+        switch (view.getId())
+        {
+            case R.id.btnInicio:
+                miIntent = new Intent(VSeleccionOriDest.this,VSeleccionTerminal.class);
+                break;
+        }
+        if (miIntent != null)
+        {
+            startActivity(miIntent);
+        }
+    }*/
+
+
+
 }
