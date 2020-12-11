@@ -4,15 +4,53 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".VSeleccionOriDest">
+    tools:context=".activity.VSeleccionOriDest">
+
+
+    <ImageView
+        android:id="@+id/imgItem"
+        android:layout_width="124dp"
+        android:layout_height="85dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="23dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/ciudad"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toTopOf="@+id/spCompany1"
+        app:layout_constraintEnd_toStartOf="@+id/txtVCiuDestino"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtVSelOriDest" />
+
+    <ImageView
+        android:id="@+id/imgItem2"
+        android:layout_width="124dp"
+        android:layout_height="85dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="17dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="9dp"
+        android:background="@drawable/ciudad"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toTopOf="@+id/spCompany"
+        app:layout_constraintEnd_toStartOf="@+id/txtVCiuOrigen"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/spCompany1" />
 
     <TextView
         android:id="@+id/txtVSelOriDest"
-        android:layout_width="181dp"
-        android:layout_height="40dp"
-        android:layout_marginStart="112dp"
-        android:layout_marginTop="76dp"
+        android:layout_width="248dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginEnd="76dp"
+        android:layout_marginBottom="46dp"
         android:text="@string/TxtViewSelOrigenDestino"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        app:autoSizeTextType="uniform"
+        app:layout_constraintBottom_toTopOf="@+id/txtVCiuDestino"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -20,22 +58,86 @@
         android:id="@+id/txtVCiuOrigen"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="56dp"
-        android:layout_marginTop="52dp"
+        android:layout_marginStart="172dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="37dp"
         android:text="@string/TxtViewCiuOrigen"
+        android:textColor="#000000"
+        android:textSize="24sp"
+        app:autoSizeTextType="uniform"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtVSelOriDest" />
+        app:layout_constraintTop_toBottomOf="@+id/spCompany1" />
 
     <com.toptoche.searchablespinnerlibrary.SearchableSpinner
         android:id="@+id/spCompany"
-        android:layout_width="273dp"
-        android:layout_height="46dp"
-        android:layout_marginEnd="48dp"
-        android:layout_marginBottom="352dp"
+        android:layout_width="286dp"
+        android:layout_height="43dp"
+        android:layout_marginStart="62dp"
+        android:layout_marginTop="38dp"
+        android:layout_marginEnd="63dp"
+        android:spinnerMode="dropdown"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtVCiuOrigen" />
+
+    <com.toptoche.searchablespinnerlibrary.SearchableSpinner
+        android:id="@+id/spCompany1"
+        android:layout_width="286dp"
+        android:layout_height="43dp"
+        android:layout_marginStart="62dp"
+        android:layout_marginTop="44dp"
+        android:layout_marginEnd="63dp"
+        android:spinnerMode="dropdown"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtVCiuDestino" />
+
+    <TextView
+        android:id="@+id/txtVCiuDestino"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="160dp"
+        android:layout_marginTop="48dp"
+        android:layout_marginEnd="37dp"
+        android:text="@string/TxtViewCiuDestino"
+        android:textColor="#000000"
+        android:textSize="24sp"
+        app:autoSizeTextType="uniform"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtVSelOriDest" />
+
+    <Button
+        android:id="@+id/buttonLocTerminal"
+        android:layout_width="131dp"
+        android:layout_height="43dp"
+        android:layout_marginStart="115dp"
+        android:layout_marginTop="128dp"
+        android:layout_marginEnd="114dp"
+        android:layout_marginBottom="46dp"
+        android:onClick="Control"
+        android:text="@string/buttonLocTerminal"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/btnInfoRutas"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.49"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/spCompany" />
+
+    <Button
+        android:id="@+id/btnInfoRutas"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="158dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="165dp"
+        android:layout_marginBottom="172dp"
+        android:onClick="onClick"
+        android:text="@string/informacion_rutas"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.766"
         app:layout_constraintStart_toStartOf="parent"
-        android:spinnerMode="dropdown"/>
+        app:layout_constraintTop_toBottomOf="@+id/buttonLocTerminal" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

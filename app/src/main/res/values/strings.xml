@@ -2,11 +2,43 @@
     <string name="app_name">timebus</string>
 
 
-    <string name="BotonInicio">Inicio</string>
+    <string name="BotonInicio">Viajero</string>
     <string name="BotonColaborador">Colaborador</string>
 
 
     <string name="TxtViewSelOrigenDestino">Seleccionar Origen y Destino</string>
-    <string name="TxtViewCiuOrigen">Ciudad Origen</string>
-    <string name="TxtViewCiuDestino">Ciudad Destino</string>
+    <string name="TxtViewCiuOrigen">Ciudad Destino</string>
+    <string name="TxtViewCiuDestino">Ciudad Origen</string>
+    <string name="buttonLocTerminal">Localizar terminales</string>
+
+    <string name="svSearch">Detalles de Viaje</string>
+    <string name="nameTextView">H.Salida</string>
+    <string name="TxtViewAsiento">Asientos Disponibles</string>
+    <string name="TxtViewAsiento2">Asientos</string>
+    <string name="textViewLugLlegada">Lugar</string>
+    <string name="textViewPrecio">Precio</string>
+    <string name="textViewTipBus">Tipo de bus</string>
+    <string name="textViewModificar">Modificar</string>
+    <string name="textViewGuardar">Guardar</string>
+
+
+    <string name="BUSCAR_TERMINALES">IR A TERMINALES</string>
+    <string name="title_activity_v_ubicacion_terminal">Map</string>
+    <string name="ubicacion_terminal">IR</string>
+    <string name="informacion_rutas">INFO RUTAS</string>
+
+
+    <string name="mostrar_informacion_de_ruta">Actualizar</string>
+    <string name="precios">PRECIO S/.</string>
+    <string name="ciudad">Ciudad </string>
+
+    <string name="DetailActivity">Actualizar Datos</string>
+    <string name="DetailActivity2">Nombre de Empresa</string>
+    <string name="DetailActivity3">Ciudad</string>
+
+    <string name="btnActEmp">Actualizar</string>
+
+    <string name="Detalle">Detalle de Viaje</string>
+
+
 </resources>

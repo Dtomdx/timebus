@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp"
+    android:orientation="vertical"
+    app:cardCornerRadius="5dp"
+    app:cardElevation="10dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="215dp"
+            android:orientation="horizontal"
+            android:padding="6dp">
+
+            <!--
+
+            <ImageView
+                android:id="@+id/iconImageView"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center"
+                android:paddingLeft="14dp"
+                android:paddingRight="14dp"
+                app:srcCompat="@drawable/ciudad"
+                android:layout_alignParentLeft="true"/>
+
+            -->
+
+
+            <ImageView
+                android:id="@+id/imgItem"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_below="@+id/textViewTipBus"
+                android:layout_marginTop="19dp"
+                android:layout_marginRight="10dp"
+                android:scaleType="centerCrop"
+                app:srcCompat="@drawable/ciudad" />
+
+            <LinearLayout
+                android:id="@+id/linearLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="4dp"
+                android:layout_marginLeft="4dp"
+                android:layout_marginTop="2dp"
+                android:layout_toEndOf="@id/imgItem"
+                android:layout_toRightOf="@id/imgItem"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/nameTextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="@string/nameTextView"
+                    android:textColor="@android:color/black"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+
+            </LinearLayout>
+
+
+            <TextView
+                android:id="@+id/TxtViewAsiento"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:layout_marginStart="25dp"
+                android:layout_marginEnd="-97dp"
+                android:layout_toEndOf="@+id/linearLayout"
+                android:text="@string/TxtViewAsiento"
+                android:textColor="@android:color/black"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/textViewTipBus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="8dp"
+                android:text="@string/textViewTipBus"
+                android:textColor="@android:color/black"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <!-- tvDescripcion = asientos-->
+
+            <!-- tvTitulo = hora salida-->
+
+
+            <TextView
+                android:id="@+id/tvAsiDisp"
+                android:layout_width="146dp"
+                android:layout_height="26dp"
+                android:layout_below="@+id/TxtViewAsiento"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="41dp"
+                android:layout_marginTop="36dp"
+                android:layout_marginEnd="22dp"
+                android:layout_marginBottom="128dp"
+                android:layout_toEndOf="@+id/tvHorSalida"
+                android:text="@string/TxtViewAsiento2" />
+
+            <TextView
+                android:id="@+id/tvHorSalida"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/linearLayout"
+                android:layout_marginStart="14dp"
+                android:layout_marginTop="34dp"
+                android:layout_toEndOf="@+id/imgItem"
+                android:text="@string/nameTextView" />
+
+
+        </RelativeLayout>
+    </LinearLayout>
+</androidx.cardview.widget.CardView>
